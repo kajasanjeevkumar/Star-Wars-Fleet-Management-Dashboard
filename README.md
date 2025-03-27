@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Live Demo(Netlify):
 
-## Getting Started
+Star Wars Fleet Management Dashboard
 
-First, run the development server:
+Overview
 
-```bash
-npm run dev
-# or
+This project is a Star Wars Fleet Management Dashboard that allows users to search, filter, and compare starships from the Star Wars universe. The application fetches starship data from the Star Wars API (SWAPI) and presents it in a user-friendly dashboard.
+
+Features
+
+Search Starships - Users can search for starships by name (e.g., "Millennium Falcon").
+
+Paginated Starship List - Displays starships with name, model, manufacturer, crew size, and hyperdrive rating.
+
+Filter Starships - Filters starships based on:
+
+Hyperdrive Rating: <1.0, 1.0-2.0, >2.0
+
+Crew Size: 1-5, 6-50, 50+
+
+Compare Starships - Select up to 3 starships and compare their details in a side-by-side view.
+
+Persist Selected Starships - The selected starships remain when navigating between pages.
+
+Dark Mode Support - Implemented using TailwindCSS themes.
+
+Tech Stack
+
+Next.js (App Router) - Framework
+
+shadcn + TailwindCSS - UI styling
+
+react-query - Efficient API data fetching and caching
+
+ts-rest - Type-safe API interactions
+
+react-table - Displaying starship lists
+
+Jotai - Managing selected starships across pages
+
+Setup Instructions
+
+Prerequisites
+
+Node.js (>=16.0.0)
+
+Yarn (or npm)
+
+Installation
+
+Clone the repository:
+
+git clone <repository-url>
+cd star-wars-fleet-dashboard
+
+Install dependencies:
+
+yarn install
+
+Start the development server:
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000/ in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Additional Implementations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+State Persistence: Jotai ensures selected starships persist across navigation.
 
-## Learn More
+Error Handling: Handles API failures gracefully with UI messages.
 
-To learn more about Next.js, take a look at the following resources:
+Performance Optimizations: React Query caching, infinite scrolling for pagination.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Mobile-Friendly: Fully responsive design.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Animations: Smooth transitions using Framer Motion.
 
-## Deploy on Vercel
+API Endpoint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Starship Search:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GET https://swapi.dev/api/starships/?search={starship-name}
+
+Deployment
+
+The app is deployed on Vercel. You can access it here: Live Demo
