@@ -1,4 +1,4 @@
-Live Demo(Netlify): https://star-wars-fleet-management-sanjeev.netlify.app/
+Preview Link: https://star-wars-fleet-management-sanjeev.netlify.app/
 
 Star Wars Fleet Management Dashboard
 
